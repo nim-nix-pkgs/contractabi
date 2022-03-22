@@ -8,8 +8,8 @@
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
   inputs.src-contractabi-0_1_1.flake = false;
+  inputs.src-contractabi-0_1_1.ref   = "refs/tags/0.1.1";
   inputs.src-contractabi-0_1_1.owner = "status-im";
-  inputs.src-contractabi-0_1_1.ref   = "0_1_1";
   inputs.src-contractabi-0_1_1.repo  = "nim-contract-abi";
   inputs.src-contractabi-0_1_1.type  = "github";
   
