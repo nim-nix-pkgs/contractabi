@@ -11,7 +11,6 @@
   inputs.src-contractabi-0_4_0.ref   = "refs/tags/0.4.0";
   inputs.src-contractabi-0_4_0.owner = "status-im";
   inputs.src-contractabi-0_4_0.repo  = "nim-contract-abi";
-  inputs.src-contractabi-0_4_0.dir   = "";
   inputs.src-contractabi-0_4_0.type  = "github";
   
   inputs."stint".owner = "nim-nix-pkgs";
