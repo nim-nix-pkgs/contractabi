@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-contractabi-0_4_0.flake = false;
-  inputs.src-contractabi-0_4_0.ref   = "refs/tags/0.4.0";
-  inputs.src-contractabi-0_4_0.owner = "status-im";
-  inputs.src-contractabi-0_4_0.repo  = "nim-contract-abi";
-  inputs.src-contractabi-0_4_0.type  = "github";
+  inputs.src-contractabi-0_4_4.flake = false;
+  inputs.src-contractabi-0_4_4.ref   = "refs/tags/0.4.4";
+  inputs.src-contractabi-0_4_4.owner = "status-im";
+  inputs.src-contractabi-0_4_4.repo  = "nim-contract-abi";
+  inputs.src-contractabi-0_4_4.type  = "github";
   
   inputs."stint".owner = "nim-nix-pkgs";
   inputs."stint".ref   = "master";
@@ -28,6 +28,14 @@
   inputs."stew".type  = "github";
   inputs."stew".inputs.nixpkgs.follows = "nixpkgs";
   inputs."stew".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
+  inputs."nimcrypto".owner = "nim-nix-pkgs";
+  inputs."nimcrypto".ref   = "master";
+  inputs."nimcrypto".repo  = "nimcrypto";
+  inputs."nimcrypto".dir   = "master";
+  inputs."nimcrypto".type  = "github";
+  inputs."nimcrypto".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."nimcrypto".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   inputs."questionable".owner = "nim-nix-pkgs";
   inputs."questionable".ref   = "master";
@@ -48,13 +56,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-contractabi-0_4_0"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-contractabi-0_4_4"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-contractabi-0_4_0";
+    src  = deps."src-contractabi-0_4_4";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
