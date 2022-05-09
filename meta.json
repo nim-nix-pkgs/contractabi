@@ -7,7 +7,7 @@
   "license": "MIT",
   "web": "https://github.com/status-im/nim-contract-abi",
   "refs": [
-    "fatal: expected flush after ref listing",
+    "fatal: unable to access 'https://github.com/status-im/nim-contract-abi/': SSL connection timeout",
     ""
   ],
   "heads": []
