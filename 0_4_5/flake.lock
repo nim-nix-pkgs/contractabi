@@ -93,13 +93,13 @@
         "nimcrypto": "nimcrypto",
         "nixpkgs": "nixpkgs",
         "questionable": "questionable",
-        "src-contractabi-main": "src-contractabi-main",
+        "src-contractabi-0_4_5": "src-contractabi-0_4_5",
         "stew": "stew",
         "stint": "stint",
         "upraises": "upraises"
       }
     },
-    "src-contractabi-main": {
+    "src-contractabi-0_4_5": {
       "flake": false,
       "locked": {
         "lastModified": 1655279587,
@@ -111,7 +111,7 @@
       },
       "original": {
         "owner": "status-im",
-        "ref": "refs/heads/main",
+        "ref": "refs/tags/0.4.5",
         "repo": "nim-contract-abi",
         "type": "github"
       }
